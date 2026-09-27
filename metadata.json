@@ -1,0 +1,6 @@
+{
+  "name": "Private Course Platform",
+  "description": "Frontend UI for a private creator course platform with student learning room, administration, video player, analytics, coupons, and access codes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
