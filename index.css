@@ -1,0 +1,237 @@
+@import "tailwindcss";
+
+@theme {
+  --color-canvas: #0E0F12;
+  --color-surface: #16181D;
+  --color-surface-hover: #1C1F26;
+  --color-surface-active: #222630;
+  --color-surface-elevated: #1A1D23;
+  --color-hairline: rgba(242, 241, 237, 0.08);
+  --color-hairline-strong: rgba(242, 241, 237, 0.16);
+  --color-cobalt: #4C63D2;
+  --color-cobalt-hover: #4055BA;
+  --color-cobalt-muted: rgba(76, 99, 210, 0.15);
+  --color-primary-text: #F2F1ED;
+  --color-secondary-text: #9A9DA6;
+  --color-tertiary-text: #6A6E78;
+  --font-serif: "Fraunces", Georgia, serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  --bg-canvas: #0E0F12;
+  --bg-surface: #16181D;
+  --bg-surface-hover: #1C1F26;
+  --border-hairline: rgba(242, 241, 237, 0.08);
+  --border-hairline-strong: rgba(242, 241, 237, 0.16);
+  --text-primary: #F2F1ED;
+  --text-secondary: #9A9DA6;
+  --text-tertiary: #6A6E78;
+  --accent-cobalt: #4C63D2;
+}
+
+/* Light Mode Variables & Base */
+html.light,
+[data-theme="light"],
+.light {
+  color-scheme: light;
+  --bg-canvas: #F8F9FA;
+  --bg-surface: #FFFFFF;
+  --bg-surface-hover: #F1F3F5;
+  --bg-surface-active: #E9ECEF;
+  --bg-surface-elevated: #FFFFFF;
+  --border-hairline: rgba(15, 23, 42, 0.08);
+  --border-hairline-strong: rgba(15, 23, 42, 0.16);
+  --text-primary: #111827;
+  --text-secondary: #5C6270;
+  --text-tertiary: #8C93A0;
+  --accent-cobalt: #3D54C4;
+  background-color: #F8F9FA;
+  color: #111827;
+}
+
+html, body {
+  background-color: #0E0F12;
+  color: #F2F1ED;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html.light body,
+.light body {
+  background-color: #F8F9FA;
+  color: #111827;
+}
+
+/* Light Theme Utility Overrides */
+html.light .bg-\[\#0E0F12\],
+.light .bg-\[\#0E0F12\] {
+  background-color: #F8F9FA !important;
+}
+
+html.light .bg-\[\#16181D\],
+.light .bg-\[\#16181D\] {
+  background-color: #FFFFFF !important;
+}
+
+html.light .bg-\[\#111317\],
+.light .bg-\[\#111317\] {
+  background-color: #F1F3F5 !important;
+}
+
+html.light .bg-\[\#1C1F26\],
+.light .bg-\[\#1C1F26\] {
+  background-color: #E9ECEF !important;
+}
+
+html.light .text-\[\#F2F1ED\],
+.light .text-\[\#F2F1ED\] {
+  color: #111827 !important;
+}
+
+html.light .text-\[\#9A9DA6\],
+.light .text-\[\#9A9DA6\] {
+  color: #5C6270 !important;
+}
+
+html.light .text-\[\#6A6E78\],
+.light .text-\[\#6A6E78\] {
+  color: #8C93A0 !important;
+}
+
+html.light .border-\[rgba\(242\,241\,237\,0\.08\)\],
+.light .border-\[rgba\(242\,241\,237\,0\.08\)\] {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+html.light .border-\[rgba\(242\,241\,237\,0\.12\)\],
+.light .border-\[rgba\(242\,241\,237\,0\.12\)\] {
+  border-color: rgba(15, 23, 42, 0.10) !important;
+}
+
+html.light .border-\[rgba\(242\,241\,237\,0\.15\)\],
+.light .border-\[rgba\(242\,241\,237\,0\.15\)\] {
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+html.light .border-\[rgba\(242\,241\,237\,0\.16\)\],
+.light .border-\[rgba\(242\,241\,237\,0\.16\)\] {
+  border-color: rgba(15, 23, 42, 0.14) !important;
+}
+
+html.light .border-\[rgba\(242\,241\,237\,0\.18\)\],
+.light .border-\[rgba\(242\,241\,237\,0\.18\)\] {
+  border-color: rgba(15, 23, 42, 0.15) !important;
+}
+
+html.light .border-\[rgba\(242\,241\,237\,0\.2\)\],
+.light .border-\[rgba\(242\,241\,237\,0\.2\)\] {
+  border-color: rgba(15, 23, 42, 0.16) !important;
+}
+
+html.light .border-\[rgba\(242\,241\,237\,0\.25\)\],
+.light .border-\[rgba\(242\,241\,237\,0\.25\)\] {
+  border-color: rgba(15, 23, 42, 0.22) !important;
+}
+
+html.light .border-\[rgba\(242\,241\,237\,0\.1\)\],
+.light .border-\[rgba\(242\,241\,237\,0\.1\)\] {
+  border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+html.light .hover\:bg-\[\#1C1F26\]:hover,
+.light .hover\:bg-\[\#1C1F26\]:hover,
+html.light .hover\:bg-\[\#16181D\]:hover,
+.light .hover\:bg-\[\#16181D\]:hover {
+  background-color: #F1F3F5 !important;
+}
+
+html.light .hover\:text-\[\#F2F1ED\]:hover,
+.light .hover\:text-\[\#F2F1ED\]:hover {
+  color: #111827 !important;
+}
+
+html.light .hover\:border-\[rgba\(242\,241\,237\,0\.25\)\]:hover,
+.light .hover\:border-\[rgba\(242\,241\,237\,0\.25\)\]:hover,
+html.light .hover\:border-\[rgba\(242\,241\,237\,0\.18\)\]:hover,
+.light .hover\:border-\[rgba\(242\,241\,237\,0\.18\)\]:hover,
+html.light .hover\:border-\[rgba\(242\,241\,237\,0\.2\)\]:hover,
+.light .hover\:border-\[rgba\(242\,241\,237\,0\.2\)\]:hover {
+  border-color: rgba(15, 23, 42, 0.25) !important;
+}
+
+html.light .bg-\[\#0E0F12\]\/80,
+.light .bg-\[\#0E0F12\]\/80 {
+  background-color: rgba(15, 23, 42, 0.45) !important;
+}
+
+html.light select option,
+.light select option {
+  background-color: #FFFFFF !important;
+  color: #111827 !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0E0F12;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(242, 241, 237, 0.12);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(242, 241, 237, 0.22);
+}
+
+html.light ::-webkit-scrollbar-track,
+.light ::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+html.light ::-webkit-scrollbar-thumb,
+.light ::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.15);
+}
+html.light ::-webkit-scrollbar-thumb:hover,
+.light ::-webkit-scrollbar-thumb:hover {
+  background: rgba(15, 23, 42, 0.25);
+}
+
+/* Deliberate checkmark filling motion */
+@keyframes checkmarkPop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.4;
+  }
+  60% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes checkStroke {
+  from {
+    stroke-dashoffset: 20;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.lesson-check-animated {
+  animation: checkmarkPop 240ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.lesson-check-stroke {
+  stroke-dasharray: 20;
+  animation: checkStroke 260ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
